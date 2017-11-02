@@ -6,7 +6,7 @@ puts "Start Folder2PDF ..."
 
 def run_rmagic files, folder_name
   r = Magick::ImageList.new()
-  files = files.sort_by{ |s| s.scan(/(\d+)|([^\d]+)/) }
+  files = files,sort_by{ |s| s.scan(/(\d+)|([^\d]+)/).map{ |a| a[1] || a[0].to_i } }
   files.each do |file|
     r.push(Magick::Image.read(file)[0])
   end
