@@ -4,6 +4,7 @@ GEM
     byebug (9.1.0)
     coderay (1.1.2)
     method_source (0.9.0)
+    naturally (2.1.0)
     pry (0.11.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -16,6 +17,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  naturally
   pry-byebug
   rmagick
 
