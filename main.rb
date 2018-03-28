@@ -11,6 +11,7 @@ def run_rmagic file_names, folder_name
     r.push(Magick::Image.read(file)[0])
   end
   r.write("../#{folder_name}.pdf")
+  r.destroy!
 end
 
 def make_pdf path
@@ -19,9 +20,8 @@ def make_pdf path
   puts "Create PDF --> #{folder_name}"
   file_names = Dir.glob("*.{jpg,jpeg,JPG,png,PNG}")
   run_rmagic(file_names, folder_name) unless file_names.count.zero?
-  # Dir.chdir('../')
+  Dir.chdir('../')
   # FileUtils.rm_rf(folder_name)
-  puts "Complete!"
 end
 
 def search_dir_make_pdf path
