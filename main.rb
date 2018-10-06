@@ -22,16 +22,15 @@ def make_pdf path
 end
 
 def search_dir_make_pdf path
-  if Dir.exist?(path)
-    Dir.chdir(path)
-    if Dir.glob("*").any? { |dir| Dir.exist?("./#{dir}") }
-      Dir.glob("*").each do |folder|
-        next unless Dir.exist?("./#{folder}")
-        search_dir_make_pdf(File.join(path, folder))
-      end
-    else
-      make_pdf(path)
+  return unless Dir.exist?(path)
+  Dir.chdir(path)
+  if Dir.glob('*').any? { |dir| Dir.exist?("./#{dir}") }
+    Dir.glob('*').each do |folder|
+      next unless Dir.exist?("./#{folder}")
+      search_dir_make_pdf(File.join(path, folder))
     end
+  else
+    make_pdf(path)
   end
 end
 
