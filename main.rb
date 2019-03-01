@@ -21,7 +21,11 @@ end
 
 def search_dir_make_pdf(path)
   dirs = Naturally.sort(Dir.glob("#{path}/**/"))
-  dirs.each { |dir| make_pdf(dir) }
+  if dirs.empty?
+    make_pdf(path)
+  else
+    dirs.each { |dir| make_pdf(dir) }
+  end
 end
 
 ARGV.each do |path|
