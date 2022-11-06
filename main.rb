@@ -13,7 +13,7 @@ end
 
 def make_pdf(dir)
   folder_name = File.basename(dir)
-  file_names = Dir.glob("#{dir}/*.{jpg,jpeg,png}")
+  file_names = Dir.glob("#{dir}/*.{jpg,jpeg,png,webp}")
   unless file_names.count.zero?
     puts "Create PDF --> #{dir}"
     run_rmagic(dir, file_names, folder_name)
