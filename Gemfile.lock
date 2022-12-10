@@ -2,7 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     naturally (2.2.1)
-    rmagick (5.0.0)
+    pkg-config (1.5.1)
+    rmagick (5.1.0)
+      pkg-config (~> 1.4)
 
 PLATFORMS
   ruby
