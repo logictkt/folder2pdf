@@ -3,7 +3,7 @@ GEM
   specs:
     naturally (2.2.1)
     pkg-config (1.5.1)
-    rmagick (5.1.0)
+    rmagick (5.2.0)
       pkg-config (~> 1.4)
 
 PLATFORMS
