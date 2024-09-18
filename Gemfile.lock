@@ -4,7 +4,7 @@ GEM
     naturally (2.2.1)
     observer (0.1.2)
     pkg-config (1.5.6)
-    rmagick (5.5.0)
+    rmagick (6.0.1)
       observer (~> 0.1)
       pkg-config (~> 1.4)
 
