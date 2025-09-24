@@ -1,10 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    naturally (2.2.1)
+    naturally (2.3.0)
     observer (0.1.2)
-    pkg-config (1.6.2)
-    rmagick (6.1.1)
+    pkg-config (1.6.4)
+    rmagick (6.1.4)
       observer (~> 0.1)
       pkg-config (~> 1.4)
 
